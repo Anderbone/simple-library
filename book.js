@@ -1,13 +1,16 @@
 const myLibrary = [];
 
-function createBook(title, author, pages){
-	this.title = title;
-	this.author = author;
-	this.pages = pages;
-	this.read = false;
+class Book {
+	constructor(title, author, pages){
+		this.title = title;
+		this.author = author;
+		this.pages = pages;
+		this.read = false;
 
-	this.info = function() {
-		return `${title} by ${author}, ${pages} pages, ` 
+	}
+
+	info = function() {
+		return `${this.title} by ${this.author}, ${this.pages} pages, ` 
 		+ (this.read ? "started" : "not read yet")
 	}
 }
